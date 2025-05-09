@@ -164,3 +164,70 @@
         height: 300px; /* Mesma altura das outras imagens */
     }
 }/*max-width:767px*/
+@media screen and (max-width: 767px){
+    .single-service-item {max-width: 350px;margin: 30px auto;}
+    .single-featured-cars {max-width: 350px;margin: 0 auto;}
+    .footer-social {text-align: left;}
+    .footer-social a i {margin-right: 16px;margin-left: 0;}
+    .hm-foot-email {max-width: 300px;}
+    
+    /* Ajustando o layout para telas de celular */
+    .featured-cars {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+    
+    .single-featured-cars {
+        width: 100%;
+        max-width: 320px; /* Ajustado para telas menores */
+        margin: 15px auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .featured-cars-img {
+        width: 100%;
+        height: 250px; /* Altura reduzida para telas menores */
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    
+    .featured-cars-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .featured-cars-txt {
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+    
+    .featured-cars-txt h2 {
+        font-size: 18px; /* Tamanho de fonte ajustado */
+        margin: 8px 0;
+    }
+    
+    .featured-cars-txt h3 {
+        font-size: 16px; /* Tamanho de fonte ajustado */
+        margin: 8px 0;
+    }
+    
+    .featured-cars-txt p {
+        font-size: 14px; /* Tamanho de fonte ajustado */
+        margin: 8px 0;
+    }
+    
+    /* Garantindo que a última div siga o mesmo padrão */
+    .single-featured-cars:last-child {
+        margin-bottom: 20px;
+    }
+    
+    .single-featured-cars:last-child .featured-cars-img {
+        height: 250px; /* Mesma altura das outras imagens */
+    }
+}/*max-width:767px*/
+
