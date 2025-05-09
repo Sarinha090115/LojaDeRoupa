@@ -113,7 +113,7 @@
         <p>
             Descubra o estilo que combina com você — elegância, conforto e atitude em cada peça.
         </p>
-        <a href="contato.html" target="_blank" class="welcome-btn" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer;">Contate-nos</a>
+        <button onclick="window.open('contato.html', '_blank')" class="welcome-btn" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #ffc400; color: white; border-radius: 5px; cursor: pointer; border: none;">Contate-nos</button>
     </div>
 </div>
 
@@ -304,7 +304,7 @@
 											nas grandes cidades. A mistura de alfaiataria com regatas caneladas e
 											casacos oversized traz versatilidade para diversas ocasiões.f
 										</p>
-										<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
+										<button class="welcome-btn new-cars-btn" onclick="window.open('detalhes1.html', '_blank')">
 											Ver detalhes
 										</button>
 									</div><!--/.new-cars-txt-->
@@ -329,7 +329,7 @@
 											verde-mata, o ocre e o marrom-terra —, essa linha exala autenticidade,
 											simplicidade e conexão com o meio ambiente.
 										</p>
-										<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
+										<button class="welcome-btn new-cars-btn" onclick="window.open('detalhes2.html', '_blank')">
 											Ver detalhes
 										</button>
 									</div><!--/.new-cars-txt-->
@@ -377,7 +377,7 @@
 			<div class="section-header">
 				<p>Confira as <span>Roupas</span> em destaque</p>
 				<h2>Roupas em destaque</h2>
-			</div><!--/.section-header-->
+			</div>
 			<div class="featured-cars-content">
 				<div class="row">
 					<div class="col-lg-3 col-md-4 col-sm-6">
@@ -387,14 +387,23 @@
 									<img src="assets/images/featured-cars/Bermuda.png" alt="cars">
 								</div>
 								<div class="featured-model-info">
+									<div class="tamanhos-tabs">
+										<button class="tamanho-btn active" data-tamanho="P">P</button>
+										<button class="tamanho-btn" data-tamanho="M">M</button>
+										<button class="tamanho-btn" data-tamanho="G">G</button>
+										<button class="tamanho-btn" data-tamanho="GG">GG</button>
+									</div>
+									<button class="welcome-btn" onclick="adicionarAoCarrinho('Bermuda bege', 90.00, 'assets/images/featured-cars/Bermuda.png')">
+										<i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
+									</button>
 								</div>
 							</div>
 							<div class="featured-cars-txt">
-								<h2><a href="#">Bermuda bege</a></h2>
+								<h2><a href="roupas.html#roupa1">Bermuda bege</a></h2>
 								<h3>R$90,00</h3>
 								<p>
 									Tecido: Algodão orgânico
-									Indicação: Etiqueta "100% Organic
+									Indicação: Etiqueta "100% Organic"
 								</p>
 							</div>
 						</div>
@@ -406,14 +415,23 @@
 									<img src="assets/images/featured-cars/VestidoBranco.png" alt="cars">
 								</div>
 								<div class="featured-model-info">
+									<div class="tamanhos-tabs">
+										<button class="tamanho-btn active" data-tamanho="P">P</button>
+										<button class="tamanho-btn" data-tamanho="M">M</button>
+										<button class="tamanho-btn" data-tamanho="G">G</button>
+										<button class="tamanho-btn" data-tamanho="GG">GG</button>
+									</div>
+									<button class="welcome-btn" onclick="adicionarAoCarrinho('Vestido infantil bege', 70.00, 'assets/images/featured-cars/VestidoBranco.png')">
+										<i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
+									</button>
 								</div>
 							</div>
 							<div class="featured-cars-txt">
-								<h2><a href="#">Vestido infantil bege</span></a></h2>
+								<h2><a href="roupas.html#roupa2">Vestido infantil bege</a></h2>
 								<h3>R$70,00</h3>
 								<p>
-									Tecido: Materiais naturais (provavelmente algodão ou linho)
-									I ndicação: Etiqueta "Natural Materials"
+									Tecido: Materiais naturais
+									Indicação: Etiqueta "Natural Materials"
 								</p>
 							</div>
 						</div>
@@ -425,13 +443,22 @@
 									<img src="assets/images/featured-cars/CamisetaMarrom.png" alt="cars">
 								</div>
 								<div class="featured-model-info">
+									<div class="tamanhos-tabs">
+										<button class="tamanho-btn active" data-tamanho="P">P</button>
+										<button class="tamanho-btn" data-tamanho="M">M</button>
+										<button class="tamanho-btn" data-tamanho="G">G</button>
+										<button class="tamanho-btn" data-tamanho="GG">GG</button>
+									</div>
+									<button class="welcome-btn" onclick="adicionarAoCarrinho('Camiseta de manga longa marrom', 100.00, 'assets/images/featured-cars/CamisetaMarrom.png')">
+										<i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
+									</button>
 								</div>
 							</div>
 							<div class="featured-cars-txt">
-								<h2><a href="#">Camiseta de manga longa marrom Feminina<span>v520</span></a></h2>
+								<h2><a href="roupas.html#roupa3">Camiseta de manga longa marrom</a></h2>
 								<h3>R$100,00</h3>
 								<p>
-									Tecido: Algodão orgânico ou reciclado
+									Tecido: Algodão orgânico
 									Indicação: Etiqueta com símbolo de reciclagem
 								</p>
 							</div>
@@ -444,10 +471,19 @@
 									<img src="assets/images/featured-cars/CamisetaMulher.png" alt="cars">
 								</div>
 								<div class="featured-model-info">
+									<div class="tamanhos-tabs">
+										<button class="tamanho-btn active" data-tamanho="P">P</button>
+										<button class="tamanho-btn" data-tamanho="M">M</button>
+										<button class="tamanho-btn" data-tamanho="G">G</button>
+										<button class="tamanho-btn" data-tamanho="GG">GG</button>
+									</div>
+									<button class="welcome-btn" onclick="adicionarAoCarrinho('Camiseta bege feminina', 50.00, 'assets/images/featured-cars/CamisetaMulher.png')">
+										<i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
+									</button>
 								</div>
 							</div>
 							<div class="featured-cars-txt">
-								<h2><a href="#">Camiseta bege feminina</a></h2>
+								<h2><a href="roupas.html#roupa4">Camiseta bege feminina</a></h2>
 								<h3>R$50,00</h3>
 								<p>
 									Tecido: Algodão orgânico
@@ -457,91 +493,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-3 col-md-4 col-sm-6">
-						<div class="single-featured-cars">
-							<div class="featured-img-box">
-								<div class="featured-cars-img">
-									<img src="assets/images/featured-cars/CriançaBege.png" alt="cars">
-								</div>
-								<div class="featured-model-info">
-								</div>
-							</div>
-
-							<div class="featured-cars-txt">
-								<h2><a href="#">Vestido infantil bege </a></h2>
-								<h3>R$45,00</h3>
-								<p>
-									Tecido: Algodão orgânico
-									Indicação: Etiqueta "100% Organic"
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-sm-6">
-						<div class="single-featured-cars">
-							<div class="featured-img-box">
-								<div class="featured-cars-img">
-									<img src="assets/images/featured-cars/MoletmHomem.png" alt="cars">
-								</div>
-								<div class="featured-model-info">
-								</div>
-							</div>
-							<div class="featured-cars-txt">
-								<h2><a href="#">Moletom masculino</a></h2>
-								<h3>R$200,00</h3>
-								<p>
-									Tecido: Algodão orgânico
-									Indicação: Etiqueta "100% Organic Cotton"
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-sm-6">
-						<div class="single-featured-cars">
-							<div class="featured-img-box">
-								<div class="featured-cars-img">
-									<img src="assets/images/featured-cars/MoletomMulher.png" alt="cars">
-								</div>
-								<div class="featured-model-info">
-								</div>
-							</div>
-							<div class="featured-cars-txt">
-								<h2><a href="#">Moletom bege feminino com capuz</a></h2>
-								<h3>R$250,00</h3>
-								<p>
-									Tecido: Tecido reciclado
-									Indicação: Etiqueta "Recycled Fabric" (escrito incorretamente como "Becycled
-									Fabric")
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-sm-6">
-						<div class="single-featured-cars">
-							<div class="featured-img-box">
-								<div class="featured-cars-img">
-									<img src="assets/images/featured-cars/RoupaAzul.png" alt="cars">
-								</div>
-								<div class="featured-model-info">
-								</div>
-							</div>
-							<div class="featured-cars-txt">
-								<div class="camiseta-azul">
-								<h2><a href="#">Camiseta azul masculino</a></h2>
-								<h3>R$50,00</h3>
-								<p>
-									Tecido: Algodão orgânico
-									Indicação: Etiqueta "100% Organic"
-								</p>
-							</div>
-						</div>
-					</div>
+				<div class="text-center" style="margin-top: 40px;">
+					<a href="roupas.html" class="welcome-btn ver-mais-btn">
+						<i class="fa fa-leaf"></i> Ver Mais Roupas Sustentáveis
+					</a>
 				</div>
 			</div>
-		</div><!--/.container-->
-
-	</section><!--/.featured-cars-->
+		</div>
+	</section>
 	<!--featured-cars end -->
 
 	<!-- clients-say strat -->

@@ -131,3 +131,27 @@ $(document).ready(function(){
 				})
 
 });
+
+// Função para controlar a seleção dos tamanhos
+$(document).ready(function() {
+    // Seleção de tamanhos
+    $('.tamanho-btn').click(function() {
+        $(this).closest('.tamanhos-tabs').find('.tamanho-btn').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // Galeria de imagens
+    $('.thumbnail-images img').click(function() {
+        const mainImage = $(this).closest('.roupa-gallery').find('.main-image');
+        const newSrc = $(this).attr('src');
+        
+        // Atualiza a imagem principal
+        mainImage.fadeOut(200, function() {
+            $(this).attr('src', newSrc).fadeIn(200);
+        });
+        
+        // Atualiza a miniatura ativa
+        $(this).closest('.thumbnail-images').find('img').removeClass('active');
+        $(this).addClass('active');
+    });
+});

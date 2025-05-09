@@ -409,38 +409,155 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff9d00;}
 /*-------------------------------------
         7. Featured-cars
 --------------------------------------*/
-/* .featured-cars{
-    padding:500px 0 60px;
+.featured-cars {
+    padding: 80px 0;
+    background: #f9f9f9;
 }
-.featured-cars-content{padding-top:96px;} */
+
+.featured-cars .section-header {
+    margin-bottom: 40px;
+}
+
+.featured-cars .section-header p {
+    color: #777;
+    font-size: 18px;
+}
+
+.featured-cars .section-header h2 {
+    font-size: 36px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.featured-cars .section-header span {
+    color: #4CAF50;
+}
+
+.single-featured-cars {
+    margin-bottom: 30px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.single-featured-cars:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.featured-img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
 
 .featured-cars-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-cars-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.single-featured-cars:hover .featured-cars-img img {
+    transform: scale(1.1);
+}
+
+.featured-model-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.single-featured-cars:hover .featured-model-info {
+    opacity: 1;
+}
+
+.tamanhos-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.tamanho-btn {
+    padding: 5px 15px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tamanho-btn:hover,
+.tamanho-btn.active {
+    background: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.welcome-btn {
+    width: 100%;
+    padding: 8px 15px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 30px;
-    height: 220px;
-    border-bottom: 1px solid #dadfe9;
-    align-items: start;
-}
-.featured-model-info{padding:12px 7px;}
-.featured-model-info p {
-    font-size: 12px;
-    color: #8c92a0;
-    text-transform: capitalize;
+    gap: 5px;
 }
 
-.featured-mi-span{display: inline-block;margin:0 10px;}
-.featured-hp-span{display: inline-block;margin-right: 10px;}
-.featured-cars-txt{margin:21px 0 47px;}
-.featured-cars-txt h2 a{font-size: 16px;margin-top: 50px;}
-.featured-cars-txt h2,.camiseta-azul p{font-size: 16px;margin-top: 50px;}
-.featured-cars-txt h2 a span{text-transform: uppercase;}
-.featured-cars-txt h3{margin-top: 20px;}
-.featured-cars-txt h3,.featured-cars-txt p{font-size: 13px;}
-/*.single-featured-cars*/
+.welcome-btn:hover {
+    background: #45a049;
+}
 
-/*-------------------------------------       
+.featured-cars-txt {
+    padding: 20px;
+}
+
+.featured-cars-txt h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.featured-cars-txt h2 a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.featured-cars-txt h2 a:hover {
+    color: #4CAF50;
+}
+
+.featured-cars-txt h3 {
+    font-size: 18px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.featured-cars-txt p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/*-------------------------------------
         8. Clients-say 
 --------------------------------------*/
 .clients-say{padding:115px 0 80px;background: #f8f9fb;}
@@ -710,3 +827,340 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff9d00;}
     100%  {bottom:7px;}
 }
 /*========================Thank you=================
+
+/* Estilos para as abas de tamanhos */
+.tamanhos-tabs {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.tamanho-btn {
+    padding: 5px 10px;
+    border: 1px solid #4CAF50;
+    background-color: white;
+    color: #4CAF50;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tamanho-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tamanho-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Estilos para o botão de adicionar ao carrinho */
+.featured-model-info .welcome-btn {
+    width: auto;
+    min-width: 120px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.featured-model-info .welcome-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.featured-model-info .welcome-btn i {
+    font-size: 14px;
+}
+
+/* Ajuste no container de informações do modelo */
+.featured-model-info {
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Estilos para o sistema de abas */
+.roupas-tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background-color: #f8f9fb;
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tab-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Estilos para a galeria de imagens */
+.roupa-gallery {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.thumbnail-images img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.thumbnail-images img:hover {
+    border-color: #4CAF50;
+}
+
+.thumbnail-images img.active {
+    border-color: #4CAF50;
+}
+
+/* Estilos para as informações da roupa */
+.roupa-info {
+    padding: 20px;
+}
+
+.roupa-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.roupa-info h3 {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.roupa-info p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Ajuste nos botões de tamanho */
+.roupa-info .tamanhos-tabs {
+    margin: 20px 0;
+}
+
+.roupa-info .welcome-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilos para a lista de roupas */
+.roupas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.roupa-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.roupa-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.roupa-item .row {
+    margin: 0;
+}
+
+.roupa-item .col-md-6 {
+    padding: 0;
+}
+
+.roupa-gallery {
+    position: relative;
+    padding: 20px;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.thumbnail-images img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.thumbnail-images img:hover,
+.thumbnail-images img.active {
+    border-color: #4CAF50;
+}
+
+.roupa-info {
+    padding: 30px;
+    background: #f9f9f9;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.roupa-info h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.roupa-info h3 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.roupa-info p {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.roupa-info .tamanhos-tabs {
+    margin: 20px 0;
+}
+
+.roupa-info .welcome-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .roupa-item .row {
+        flex-direction: column;
+    }
+    
+    .roupa-gallery {
+        padding: 15px;
+    }
+    
+    .main-image {
+        height: 300px;
+    }
+    
+    .roupa-info {
+        padding: 20px;
+    }
+    
+    .roupa-info h2 {
+        font-size: 24px;
+    }
+    
+    .roupa-info h3 {
+        font-size: 20px;
+    }
+}
+
+/* Estilos para o botão Ver Mais */
+.ver-mais-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid #4CAF50;
+}
+
+.ver-mais-btn:hover {
+    background-color: transparent;
+    color: #4CAF50;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.ver-mais-btn i {
+    font-size: 18px;
+}
+
+.text-center {
+    text-align: center;
+}
