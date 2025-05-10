@@ -35,9 +35,9 @@
 
                 <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li><a href="index.html">Início</a></li>
                         <li class="active"><a href="roupas.html">Roupas</a></li>
                         <li><a href="contato.html">Contato</a></li>
+                        <li><a href="#" onclick="mostrarCarrinho()">Carrinho</a></li>
                     </ul>
                 </div>
             </div>
@@ -59,11 +59,11 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="roupa-gallery">
-                                <img src="assets/images/featured-cars/Bermuda.png" alt="Bermuda bege" class="main-image">
+                                <img src="assets/images/featured-cars/Bermuda.png" alt="Bermuda bege" class="main-image" id="mainImage">
                                 <div class="thumbnail-images">
-                                    <img src="assets/images/featured-cars/Bermuda.png" alt="Bermuda bege 1" class="active">
-                                    <img src="assets/images/featured-cars/CamisetaBranca.png" alt="Bermuda bege 2">
-                                    <img src="assets/images/featured-cars/CamisetaMarrom.png" alt="Bermuda bege 3">
+                                    <img src="assets/images/featured-cars/Bermuda.png" alt="Bermuda bege 1" class="active" onclick="trocarImagem('assets/images/featured-cars/Bermuda.png')">
+                                    <img src="assets/images/featured-cars/CamisetaBranca.png" alt="Bermuda bege 2" onclick="trocarImagem('assets/images/featured-cars/CamisetaBranca.png')">
+                                    <img src="assets/images/featured-cars/CamisetaMarrom.png" alt="Bermuda bege 3" onclick="trocarImagem('assets/images/featured-cars/CamisetaMarrom.png')">
                                 </div>
                             </div>
                         </div>
@@ -74,14 +74,15 @@
                                 <p>Tecido: Algodão orgânico</p>
                                 <p>Indicação: Etiqueta "100% Organic"</p>
                                 <div class="tamanhos-tabs">
-                                    <button class="tamanho-btn active" data-tamanho="P">P</button>
-                                    <button class="tamanho-btn" data-tamanho="M">M</button>
-                                    <button class="tamanho-btn" data-tamanho="G">G</button>
-                                    <button class="tamanho-btn" data-tamanho="GG">GG</button>
+                                    <button class="tamanho-btn active" data-tamanho="P" onclick="selecionarTamanho(this)">P</button>
+                                    <button class="tamanho-btn" data-tamanho="M" onclick="selecionarTamanho(this)">M</button>
+                                    <button class="tamanho-btn" data-tamanho="G" onclick="selecionarTamanho(this)">G</button>
+                                    <button class="tamanho-btn" data-tamanho="GG" onclick="selecionarTamanho(this)">GG</button>
                                 </div>
                                 <button class="welcome-btn" onclick="adicionarAoCarrinho('Bermuda bege', 90.00, 'assets/images/featured-cars/Bermuda.png')">
                                     <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
                                 </button>
+                                <button class="welcome-btn" style="margin-top: 10px;" onclick="verMaisDetalhes('Bermuda bege')">Ver Mais Detalhes</button>
                             </div>
                         </div>
                     </div>
@@ -107,10 +108,10 @@
                                 <p>Tecido: Materiais naturais</p>
                                 <p>Indicação: Etiqueta "Natural Materials"</p>
                                 <div class="tamanhos-tabs">
-                                    <button class="tamanho-btn active" data-tamanho="P">P</button>
-                                    <button class="tamanho-btn" data-tamanho="M">M</button>
-                                    <button class="tamanho-btn" data-tamanho="G">G</button>
-                                    <button class="tamanho-btn" data-tamanho="GG">GG</button>
+                                    <button class="tamanho-btn active" data-tamanho="P" onclick="selecionarTamanho(this)">P</button>
+                                    <button class="tamanho-btn" data-tamanho="M" onclick="selecionarTamanho(this)">M</button>
+                                    <button class="tamanho-btn" data-tamanho="G" onclick="selecionarTamanho(this)">G</button>
+                                    <button class="tamanho-btn" data-tamanho="GG" onclick="selecionarTamanho(this)">GG</button>
                                 </div>
                                 <button class="welcome-btn" onclick="adicionarAoCarrinho('Vestido infantil bege', 70.00, 'assets/images/featured-cars/VestidoBranco.png')">
                                     <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
@@ -140,10 +141,10 @@
                                 <p>Tecido: Algodão orgânico</p>
                                 <p>Indicação: Etiqueta com símbolo de reciclagem</p>
                                 <div class="tamanhos-tabs">
-                                    <button class="tamanho-btn active" data-tamanho="P">P</button>
-                                    <button class="tamanho-btn" data-tamanho="M">M</button>
-                                    <button class="tamanho-btn" data-tamanho="G">G</button>
-                                    <button class="tamanho-btn" data-tamanho="GG">GG</button>
+                                    <button class="tamanho-btn active" data-tamanho="P" onclick="selecionarTamanho(this)">P</button>
+                                    <button class="tamanho-btn" data-tamanho="M" onclick="selecionarTamanho(this)">M</button>
+                                    <button class="tamanho-btn" data-tamanho="G" onclick="selecionarTamanho(this)">G</button>
+                                    <button class="tamanho-btn" data-tamanho="GG" onclick="selecionarTamanho(this)">GG</button>
                                 </div>
                                 <button class="welcome-btn" onclick="adicionarAoCarrinho('Camiseta de manga longa marrom', 100.00, 'assets/images/featured-cars/CamisetaMarrom.png')">
                                     <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
@@ -161,8 +162,8 @@
                                 <img src="assets/images/featured-cars/CamisetaMulher.png" alt="Camiseta bege" class="main-image">
                                 <div class="thumbnail-images">
                                     <img src="assets/images/featured-cars/CamisetaMulher.png" alt="Camiseta bege 1" class="active">
-                                    <img src="assets/images/featured-cars/CamisetaBranca.png" alt="Camiseta bege 2">
-                                    <img src="assets/images/featured-cars/RoupaAzul.png" alt="Camiseta bege 3">
+                                    <img src="assets/images/featured-cars/CamisetaBranca.png" alt="Camiseta bege 2" class="active">
+                                    <img src="assets/images/featured-cars/RoupaAzul.png" alt="Camiseta bege 3" class="active">
                                 </div>
                             </div>
                         </div>
@@ -173,144 +174,12 @@
                                 <p>Tecido: Algodão orgânico</p>
                                 <p>Indicação: Etiqueta "100% Organic"</p>
                                 <div class="tamanhos-tabs">
-                                    <button class="tamanho-btn active" data-tamanho="P">P</button>
-                                    <button class="tamanho-btn" data-tamanho="M">M</button>
-                                    <button class="tamanho-btn" data-tamanho="G">G</button>
-                                    <button class="tamanho-btn" data-tamanho="GG">GG</button>
+                                    <button class="tamanho-btn active" data-tamanho="P" onclick="selecionarTamanho(this)">P</button>
+                                    <button class="tamanho-btn" data-tamanho="M" onclick="selecionarTamanho(this)">M</button>
+                                    <button class="tamanho-btn" data-tamanho="G" onclick="selecionarTamanho(this)">G</button>
+                                    <button class="tamanho-btn" data-tamanho="GG" onclick="selecionarTamanho(this)">GG</button>
                                 </div>
                                 <button class="welcome-btn" onclick="adicionarAoCarrinho('Camiseta bege feminina', 50.00, 'assets/images/featured-cars/CamisetaMulher.png')">
-                                    <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Roupa 5 -->
-                <div class="roupa-item">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="roupa-gallery">
-                                <img src="assets/images/featured-cars/VestidoVerde.png" alt="Vestido sustentável" class="main-image">
-                                <div class="thumbnail-images">
-                                    <img src="assets/images/featured-cars/VestidoVerde.png" alt="Vestido sustentável 1" class="active">
-                                    <img src="assets/images/featured-cars/CamisetaVerde.png" alt="Vestido sustentável 2">
-                                    <img src="assets/images/featured-cars/MoletomMulher.png" alt="Vestido sustentável 3">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="roupa-info">
-                                <h2>Vestido Sustentável Verde</h2>
-                                <h3>R$120,00</h3>
-                                <p>Tecido: Algodão reciclado</p>
-                                <p>Indicação: Certificado de sustentabilidade</p>
-                                <div class="tamanhos-tabs">
-                                    <button class="tamanho-btn active" data-tamanho="P">P</button>
-                                    <button class="tamanho-btn" data-tamanho="M">M</button>
-                                    <button class="tamanho-btn" data-tamanho="G">G</button>
-                                    <button class="tamanho-btn" data-tamanho="GG">GG</button>
-                                </div>
-                                <button class="welcome-btn" onclick="adicionarAoCarrinho('Vestido Sustentável Verde', 120.00, 'assets/images/featured-cars/VestidoVerde.png')">
-                                    <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Roupa 6 -->
-                <div class="roupa-item">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="roupa-gallery">
-                                <img src="assets/images/featured-cars/CalcaJeans.png" alt="Calça jeans sustentável" class="main-image">
-                                <div class="thumbnail-images">
-                                    <img src="assets/images/featured-cars/CalcaJeans.png" alt="Calça jeans sustentável 1" class="active">
-                                    <img src="assets/images/featured-cars/CamisetaBranca.png" alt="Calça jeans sustentável 2">
-                                    <img src="assets/images/featured-cars/CamisetaMarrom.png" alt="Calça jeans sustentável 3">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="roupa-info">
-                                <h2>Calça Jeans Sustentável</h2>
-                                <h3>R$150,00</h3>
-                                <p>Tecido: Denim reciclado</p>
-                                <p>Indicação: Processo de tingimento eco-friendly</p>
-                                <div class="tamanhos-tabs">
-                                    <button class="tamanho-btn active" data-tamanho="P">P</button>
-                                    <button class="tamanho-btn" data-tamanho="M">M</button>
-                                    <button class="tamanho-btn" data-tamanho="G">G</button>
-                                    <button class="tamanho-btn" data-tamanho="GG">GG</button>
-                                </div>
-                                <button class="welcome-btn" onclick="adicionarAoCarrinho('Calça Jeans Sustentável', 150.00, 'assets/images/featured-cars/CalcaJeans.png')">
-                                    <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Roupa 7 -->
-                <div class="roupa-item">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="roupa-gallery">
-                                <img src="assets/images/featured-cars/BlusaTrico.png" alt="Blusa de tricô sustentável" class="main-image">
-                                <div class="thumbnail-images">
-                                    <img src="assets/images/featured-cars/BlusaTrico.png" alt="Blusa de tricô sustentável 1" class="active">
-                                    <img src="assets/images/featured-cars/CamisetaBranca.png" alt="Blusa de tricô sustentável 2">
-                                    <img src="assets/images/featured-cars/CamisetaMarrom.png" alt="Blusa de tricô sustentável 3">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="roupa-info">
-                                <h2>Blusa de Tricô Sustentável</h2>
-                                <h3>R$180,00</h3>
-                                <p>Tecido: Fio de algodão orgânico</p>
-                                <p>Indicação: Produção artesanal sustentável</p>
-                                <div class="tamanhos-tabs">
-                                    <button class="tamanho-btn active" data-tamanho="P">P</button>
-                                    <button class="tamanho-btn" data-tamanho="M">M</button>
-                                    <button class="tamanho-btn" data-tamanho="G">G</button>
-                                    <button class="tamanho-btn" data-tamanho="GG">GG</button>
-                                </div>
-                                <button class="welcome-btn" onclick="adicionarAoCarrinho('Blusa de Tricô Sustentável', 180.00, 'assets/images/featured-cars/BlusaTrico.png')">
-                                    <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Roupa 8 -->
-                <div class="roupa-item">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="roupa-gallery">
-                                <img src="assets/images/featured-cars/Conjunto.png" alt="Conjunto sustentável" class="main-image">
-                                <div class="thumbnail-images">
-                                    <img src="assets/images/featured-cars/Conjunto.png" alt="Conjunto sustentável 1" class="active">
-                                    <img src="assets/images/featured-cars/CamisetaBranca.png" alt="Conjunto sustentável 2">
-                                    <img src="assets/images/featured-cars/CamisetaMarrom.png" alt="Conjunto sustentável 3">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="roupa-info">
-                                <h2>Conjunto Sustentável</h2>
-                                <h3>R$200,00</h3>
-                                <p>Tecido: Algodão orgânico e linho</p>
-                                <p>Indicação: Conjunto eco-friendly completo</p>
-                                <div class="tamanhos-tabs">
-                                    <button class="tamanho-btn active" data-tamanho="P">P</button>
-                                    <button class="tamanho-btn" data-tamanho="M">M</button>
-                                    <button class="tamanho-btn" data-tamanho="G">G</button>
-                                    <button class="tamanho-btn" data-tamanho="GG">GG</button>
-                                </div>
-                                <button class="welcome-btn" onclick="adicionarAoCarrinho('Conjunto Sustentável', 200.00, 'assets/images/featured-cars/Conjunto.png')">
                                     <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
                                 </button>
                             </div>
